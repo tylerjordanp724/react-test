@@ -5,7 +5,7 @@ class Button extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: 'test'
+            text: null
         }
     }
 
@@ -14,7 +14,7 @@ class Button extends React.Component {
     }
 
     render() {
-        return <button className="btn" onClick={this.onClick}>{this.state.text}</button>;
+        return <button className="btn" text={this.state.text} onClick={this.onClick}>{this.props.text}</button>;
     }
 }
 

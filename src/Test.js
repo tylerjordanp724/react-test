@@ -9,7 +9,7 @@ class Test extends React.Component {
         return(
             <div className="test-container">
                 <h1>This is a test component</h1>
-                <Button />
+                <Button text="Click me, bitch!"/>
             </div>
         );
     }
