@@ -10,7 +10,7 @@ class Button extends React.Component {
     }
 
     onClick() {
-        window.alert('I was clicked');
+        window.alert("LET'S FUCKIN' GOOOOOOO!!!");
     }
 
     render() {
