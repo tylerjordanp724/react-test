@@ -7,14 +7,17 @@ class Button extends React.Component {
         this.state = {
             text: null
         }
+
+        this.handleTitle = this.handleTitle.bind(this);
     }
 
-    onClick() {
-        window.alert("LET'S FUCKIN' GOOOOOOO!!!");
+    handleTitle(e) {
+        const title = e.state;
+        this.props.onClick(title);
     }
 
     render() {
-        return <button className="btn" text={this.state.text} onClick={this.onClick}>{this.props.text}</button>;
+        return <button className="btn" text={this.state.text} onClick={this.handleTitle}>{this.props.text}</button>;
     }
 }
 

@@ -1,4 +1,4 @@
-.btn {
+button.btn {
     appearance: none;
     border: 0;
     display: block;
@@ -11,4 +11,13 @@
     font-style: normal;
     text-transform: capitalize;
     cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: red;
+    }
+
+    &:focus {
+        outline: 0;
+    }
 }

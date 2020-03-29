@@ -4,12 +4,26 @@ import './test.scss';
 
 
 class Test extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: 'This is a test component'
+        }
+
+        this.changeTitle = this.changeTitle.bind(this);
+    }
+
+    changeTitle() {
+        this.setState({
+            title: 'This is a new title'
+        });
+    }
 
     render() {
         return(
             <div className="test-container">
-                <h1>This is a test component</h1>
-                <Button text="Click me, bitch!"/>
+                <h1>{this.state.title}</h1>
+                <Button text="Click the button" onClick={this.changeTitle}/>
             </div>
         );
     }
