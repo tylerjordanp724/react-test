@@ -14,9 +14,15 @@ class Test extends React.Component {
     }
 
     changeTitle() {
-        this.setState({
-            title: 'This is a new title'
-        });
+        if(this.state.title === 'This is a test component') {
+            this.setState({
+                title: 'This is a new title'
+            });
+        } else {
+            this.setState({
+                title: 'This is a test component'
+            });
+        }
     }
 
     render() {
@@ -28,5 +34,5 @@ class Test extends React.Component {
         );
     }
 };
-  
+ 
 export default Test;
