@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../Button/Button';
 import './test.scss';
 
 
@@ -23,6 +23,8 @@ class Test extends React.Component {
         this.state.title === 'This is a new title' ? this.setTitle('This is a test component') : this.setTitle('This is a new title'); 
        
     }
+    //Lifecycle methods can go here
+
 
     render() {
         return(
