@@ -13,16 +13,15 @@ class Test extends React.Component {
         this.changeTitle = this.changeTitle.bind(this);
     }
 
+    setTitle(title) {
+        this.setState({
+            title: title
+        });
+    }
+
     changeTitle() {
-        if(this.state.title === 'This is a test component') {
-            this.setState({
-                title: 'This is a new title'
-            });
-        } else {
-            this.setState({
-                title: 'This is a test component'
-            });
-        }
+        this.state.title === 'This is a new title' ? this.setTitle('This is a test component') : this.setTitle('This is a new title'); 
+       
     }
 
     render() {
