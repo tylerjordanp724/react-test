@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../Header/Header';
 import Button from '../Button/Button';
 import './test.scss';
 
@@ -28,9 +29,12 @@ class Test extends React.Component {
 
     render() {
         return(
-            <div className="test-container">
-                <h1>{this.state.title}</h1>
-                <Button text="Click the button" onClick={this.changeTitle}/>
+            <div class="main">
+                <Header/>
+                <div className="test-container">
+                    <h1>{this.state.title}</h1>
+                    <Button text="Click the button" onClick={this.changeTitle}/>
+                </div>
             </div>
         );
     }
