@@ -1,0 +1,66 @@
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    height: 75px;
+    background-color: blue;
+}
+
+.menu-btn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    cursor: pointer;
+
+    .menu-slice {
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 9px;
+        }
+
+        &:nth-child(3) {
+            top: 18px;
+        }
+
+    }
+}
+
+.main-nav {
+    .main-menu {
+        position: relative;
+        top: 75px;
+        padding: 60px 30px;
+        width: 320px;
+        height: 100vh;
+        background-color: blue;
+    }
+
+    .main-menu ul {
+        display: block;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+    .main-menu ul li {
+        display: block;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 15px 0;  
+    }
+
+}
