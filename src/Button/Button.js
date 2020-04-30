@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './button.scss';
 
-class Button extends React.Component {
+export default class Button extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,8 +17,6 @@ class Button extends React.Component {
     }
 
     render() {
-        return <button className="btn" text={this.state.text} onClick={this.handleTitle}>{this.props.text}</button>;
+        return <button className="btn" text={ this.state.text } onClick={ this.handleTitle }>{ this.props.text }</button>;
     }
 }
-
-export default Button;

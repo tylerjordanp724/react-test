@@ -29,11 +29,11 @@ class Test extends React.Component {
 
     render() {
         return(
-            <div class="main">
+            <div className="main">
                 <Header/>
                 <div className="test-container">
-                    <h1>{this.state.title}</h1>
-                    <Button text="Click the button" onClick={this.changeTitle}/>
+                    <h1>{ this.state.title }</h1>
+                    <Button text="Click the button" onClick={ this.changeTitle }/>
                 </div>
             </div>
         );
