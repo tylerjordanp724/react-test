@@ -6,8 +6,8 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuOpen: false,
-            menuButtonActive: false
+            menuClose: true,
+            menuButtonInactive: true
         }
     }
 
