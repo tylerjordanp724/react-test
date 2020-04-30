@@ -21,8 +21,8 @@ class Test extends React.Component {
     }
 
     changeTitle() {
-        this.state.title === 'This is a new title' ? this.setTitle('This is a test component') : this.setTitle('This is a new title'); 
-       
+        this.state.title === 'This is a new title' ? this.setTitle('This is a test component') : this.setTitle('This is a new title');
+
     }
     //Lifecycle methods can go here
 
@@ -39,5 +39,5 @@ class Test extends React.Component {
         );
     }
 };
- 
+
 export default Test;

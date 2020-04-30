@@ -1,32 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './header.scss';
 
-class Header extends React.Component {
-
+export default class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuClose: true,
-            menuButtonInactive: true
+            menuClosed: true
         }
+        this.menuToggle = this.menuToggle.bind(this);
     }
 
-    // this.setState({
-    //     menuOpen: menuOpen,
-    //     menuButtonActive: menuButtonActive
-    // })
+    setMenuState = (menuClosed) => {
+        this.setState({
+            menuClosed: menuClosed
+        });
+    }
 
-    // menuToggle() {
-    //     var isMenuBtnActive = this.state.menuButtonActive,
-    //         isMenuOpen = this.state.menuOpen;
-
-    //     isMenuBtnActive ? this.setState({ menuButtonActive: true }) : this.setState({ menuButtonActive: false });
-    // }
-
+    menuToggle = () => {
+        this.state.menuClosed ? this.setMenuState(false) : this.setMenuState(true);
+    }
 
     render() {
         return (
-            <div className="header">
+            <div className={`header${this.state.menuClosed === false ? ' menu-open' : ''}`}>
                 <div className="menu-btn" onClick={this.menuToggle}>
                     <div className="menu-slice"></div>
                     <div className="menu-slice"></div>
@@ -45,5 +41,3 @@ class Header extends React.Component {
         );
     }
 }
-
-export default Header;
