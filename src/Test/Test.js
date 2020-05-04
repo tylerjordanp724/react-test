@@ -1,10 +1,9 @@
-import React from 'react';
-import Header from '../Header/Header';
+import React, { Component } from 'react';
 import Button from '../Button/Button';
 import './test.scss';
 
 
-class Test extends React.Component {
+export default class Test extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,15 +28,10 @@ class Test extends React.Component {
 
     render() {
         return(
-            <div className="main">
-                <Header/>
-                <div className="test-container">
-                    <h1>{ this.state.title }</h1>
-                    <Button text="Click the button" onClick={ this.changeTitle }/>
-                </div>
+            <div className="test-container">
+                <h1>{ this.state.title }</h1>
+                <Button text="Click the button" onClick={ this.changeTitle }/>
             </div>
         );
     }
 };
-
-export default Test;

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import MenuButton from './MenuButton';
+import MainNav from './MainNav';
 import './header.scss';
 
 export default class Header extends Component {
@@ -25,20 +27,8 @@ export default class Header extends Component {
     render() {
         return (
             <div className={ `header${ this.state.menuOpen }` }>
-                <div className="menu-btn" onClick={ this.menuToggle }>
-                    <div className="menu-slice"></div>
-                    <div className="menu-slice"></div>
-                    <div className="menu-slice"></div>
-                </div>
-                <div className="main-nav">
-                    <div className="main-menu">
-                        <ul>
-                            <li>Menu Item 1</li>
-                            <li>Menu Item 2</li>
-                            <li>Menu Item 3</li>
-                        </ul>
-                    </div>
-                </div>
+                <MenuButton onClick={ this.menuToggle }/>
+                <MainNav />
             </div>
         );
     }
