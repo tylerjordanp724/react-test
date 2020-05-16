@@ -19,7 +19,6 @@ export default class Test extends Component {
 
     changeTitle = () => {
         this.state.title === 'This is a new title' ? this.setTitle('This is a test component') : this.setTitle('This is a new title');
-
     }
     //Lifecycle methods can go here
 

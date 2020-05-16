@@ -3,11 +3,11 @@ import './button.scss';
 
 export default class Button extends Component {
 
-    handleTitle = (e) => {
-        const title = e.state;
-        this.props.onClick(title);
+    handleClick = (e) => {
+        const itemState = e.state;
+        this.props.onClick(itemState);
     }
     render() {
-        return <button className="btn" onClick={ this.handleTitle }>{ this.props.text }</button>;
+        return <button className="btn" onClick={ this.handleClick }>{ this.props.text }</button>;
     }
 }
