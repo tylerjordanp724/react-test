@@ -10,7 +10,6 @@ export default class Header extends Component {
             menuClosed: true,
             menuOpen: ''
         }
-        this.menuToggle = this.menuToggle.bind(this);
     }
 
     setMenuState = (menuClosed, menuOpen) => {
@@ -25,6 +24,7 @@ export default class Header extends Component {
     }
 
     render() {
+        
         return (
             <div className={ `header${ this.state.menuOpen }` }>
                 <MenuButton onClick={ this.menuToggle }/>

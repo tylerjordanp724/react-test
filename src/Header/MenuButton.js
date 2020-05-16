@@ -3,13 +3,7 @@ import './header.scss';
 
 export default class MenuButton extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.handleMenu = this.handleMenu.bind(this);
-  }
-
-  handleMenu(e) {
+  handleMenu = (e) => {
     const menuState = e.state;
     this.props.onClick(menuState);
   }
